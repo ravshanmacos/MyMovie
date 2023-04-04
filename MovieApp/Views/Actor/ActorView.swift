@@ -9,6 +9,17 @@ import UIKit
 
 final class ActorView: UIViewController{
     
+    private lazy var tableView: UITableView = {
+       let tableView = UITableView()
+        ActorViewCell.register(to: tableView)
+        FilmsCell.register(to: tableView)
+        return tableView
+    }()
+    
+    override func loadView() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
